@@ -11,7 +11,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
         <div class="container-fluid">
-          <a class="navbar-brand" href="./index.html">
+          <a class="navbar-brand" href="../index.html">
             <img src="https://i.postimg.cc/QxWG4Z8c/lipspink.jpg" alt="logo" loading="lazy">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,14 +43,53 @@
       </nav>
     
     <main>
-        <h2>Contact</h2>
+      <h2 class="fw-bold fs-1">Contact</h2>
+      <br><br>
+      <div class="container align-items-center">
+        <div class="row">
+          <div class="col shadow p-5" id="form">
+            <form action="https://formspree.io/f/xyyqqqre" method="post">
+              <div class="row my-3" id="fn">
+                <label for="#firstname">First name</label>
+                <input type="text" id="firstname" placeholder="Your name" required name="Firstname">
+              </div>
+              <div class="row my-3">
+                <label for="#email">Email</label>
+                <input type="text" id="email" placeholder="Email address" required name="Email">
+              </div>
+              <div class="row my-3">
+                <label for="#msg">Message</label>
+                <textarea name="message" id="msg" cols="30" rows="10" placeholder="Your message"></textarea>
+              </div>
+              <div class="button-wrapper">
+                <button class="btn btn-dark" type="submit">Get in touch</button>
+              </div>
+            </form>
+          </div>
+          <div class="col">
+            <div class="row">
+              <h4 class="fw-bold fs-3">Details</h4>
+              <p class="lead fs-5">aneeqalouw057@gmail.com</p>
+              <p class="lead fs-5">+27 83 424 6185</p>
+            </div>
+            <div class="row">
+              <h4 class="fw-bold fs-3">Based in</h4>
+              <p>Cape Town, South Africa</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
 
     </main>
     <footer class="bg-dark text-white align-items-center">
-      <p>Kilau Lip Pigments &copy; 2023</p>
+      <p>Kilau Lip Pigments &copy; <span id="currYear"></span></p>
     </footer>
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- js -->
+    <script src="../script/code.js"></script>
 </body>
 </html>

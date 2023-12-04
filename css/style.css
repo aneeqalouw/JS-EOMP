@@ -6,29 +6,31 @@
     padding: 0;
     box-sizing: border-box;
 }
+footer{
+    bottom: fixed;
+}
 body{
     font-family: 'Julius Sans One', sans-serif;
     text-align: center;
     display: grid;
     grid-template-rows: auto minmax(100%,100vh) auto;
 }
+nav ul li:hover{
+    font-weight: bold;
+    text-decoration: underline wheat;
+}
+
 
 /* home */
 img[alt='logo']{
     width: 5rem;
     aspect-ratio: 1/1;
-}
+ }
 img[alt='Glosses']{
-    width: 27rem;
-    aspect-ratio: 1/1;
+    width: 30rem;
+    height: 30rem;
 }
-img[alt='Glosses2']{
-    width: 27rem;
-    height: 25.5rem;
-}
-nav ul li{
-    color: white;
-}
+
 
 
 /* about */
@@ -36,3 +38,45 @@ img[alt='Before and after']{
     width: 30rem;
     aspect-ratio: 1/1;
 }
+@keyframes slideInImg {
+    from { transform: translateX(-600px);
+
+    }
+
+    to{ transform: translateX(0);
+
+    }
+}
+@keyframes slideInText {
+    from { transform: translateX(600px);
+
+    }
+
+    to{ transform: translateX(0);
+
+    }
+}
+
+#slide2{
+    animation-name: slideInText;
+    animation-duration: 1.1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+#slide1{
+    animation-name: slideInImg;
+    animation-duration: 1.1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+/* products */
+#search{
+    width: 300px;
+}
+
+

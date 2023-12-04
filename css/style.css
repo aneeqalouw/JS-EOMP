@@ -5,3 +5,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&family=Julius+Sans+One&family=M+PLUS+Code+Latin&family=Oswald&family=Raleway:wght@500&display=swap');
+body{
+    font-family: 'Julius Sans One', sans-serif;
+    text-align: center;
+}
+
+img[alt='logo']{
+    width: 5rem;
+    aspect-ratio: 1/1;
+}
+nav ul li{
+    color: white;
+}

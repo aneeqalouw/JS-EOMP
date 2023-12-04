@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&family=Julius+Sans+One&family=M+PLUS+Code+Latin&family=Oswald&family=Raleway:wght@500&display=swap');
 *,
 *::before,
 *::after{
@@ -5,16 +6,33 @@
     padding: 0;
     box-sizing: border-box;
 }
-@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&family=Julius+Sans+One&family=M+PLUS+Code+Latin&family=Oswald&family=Raleway:wght@500&display=swap');
 body{
     font-family: 'Julius Sans One', sans-serif;
     text-align: center;
+    display: grid;
+    grid-template-rows: auto minmax(100%,100vh) auto;
 }
 
+/* home */
 img[alt='logo']{
     width: 5rem;
     aspect-ratio: 1/1;
 }
+img[alt='Glosses']{
+    width: 27rem;
+    aspect-ratio: 1/1;
+}
+img[alt='Glosses2']{
+    width: 27rem;
+    height: 25.5rem;
+}
 nav ul li{
     color: white;
+}
+
+
+/* about */
+img[alt='Before and after']{
+    width: 30rem;
+    aspect-ratio: 1/1;
 }

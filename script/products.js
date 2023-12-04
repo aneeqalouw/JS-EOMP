@@ -1,4 +1,4 @@
-// debugger
+document.querySelector('#currYear').textContent = new Date().getUTCFullYear()
 let products = JSON.parse(localStorage.getItem('products')) ? JSON.parse(localStorage.getItem('products')) : localStorage.setItem(('products'),JSON.stringify(
     [
         {

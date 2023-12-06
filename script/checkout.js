@@ -8,6 +8,3 @@ if (cartItems == ''){
        <a class="fw-bold" href="../html/products.html">Shop now</a>
     `
 }
-function addToCart(){
-
-}

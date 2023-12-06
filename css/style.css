@@ -80,7 +80,10 @@ img[alt='Before and after']{
 }
 
 
-/* contact */
+/* admin */
+.modal{
+    display: none;
+}
 
 
 

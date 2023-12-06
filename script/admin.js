@@ -57,14 +57,16 @@ let products = [
     }
 ]
 localStorage.setItem(('products'),JSON.stringify(products))
+
+
 let adminTable = document.querySelector('[data-admin-table]')
-
-
-
 function displayAdmin(){
     adminTable.innerHTML = ''
     try{
-        products.map((prod,index) => {
+        products.map
+        ((prod,index) => {
+            console.log(prod)
+    
             adminTable.innerHTML += `
                 <tr>
                   <td>${index+1}</td>
@@ -72,10 +74,50 @@ function displayAdmin(){
                   <td><img src="${prod.image}" alt="${prod.name}" class="img-fluid" style="width:15rem;"></td>
                   <td>${prod.price}</td>
                   <td>
-                    <div>
-                       <button class="btn btn-dark" value='${index} data-btnEdit'><i class="bi bi-pencil-square"></i></button>
-                       <button class="btn btn-dark" value='${index}'data-btnDel>Del</button>
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#editProduct${prod.id}">
+                     <i class="bi bi-pencil-square"></i>
+                  </button>
+                  
+                  <!-- Modal -->
+                  <div class="modal fade" id="editProduct${prod.id}" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="modalHeader">Edit Product</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                           <form>
+                             <label>ID</label>
+                             <br><br>
+                             <input type="text" placeholder="${index+1}">
+                             <br><br>
+                             <label>Name</label>
+                             <br><br>
+                             <input type="text" placeholder="${prod.name}">
+                             <br><br>
+                             <label>Image URL</label>
+                             <br><br>
+                             <input type="text" placeholder="${prod.image}">
+                             <br><br>
+                             <label>Price</label>
+                             <br><br>
+                             <input type="text" placeholder="${prod.price}">
+                             <br><br>
+                           </form>
+                          ...
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-success">Save changes</button>
+                        </div>
+                      </div>
                     </div>
+                  </div>
+                  </td>
+                  <td>  
+                    <button class="btn btn-dark" value='${index}'data-btnDel><i class="bi bi-trash3-fill"></i></button>
                   </td>
                 </tr>
             `
@@ -83,7 +125,7 @@ function displayAdmin(){
         });
 
     }catch(e){
-        alert(e.message)
+        alert("No data found")
     }
 }
 displayAdmin()
@@ -115,24 +157,8 @@ function addNewProduct(){
 
 btnAddProduct.addEventListener('click', addNewProduct)
 
-function editProduct(){
-    document.write(`<div class="modal" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>Modal body text goes here.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  `)
+function update(){
+    
 }
+
 

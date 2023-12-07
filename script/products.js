@@ -1,4 +1,5 @@
 document.querySelector('#currYear').textContent = new Date().getUTCFullYear()
+let productContainer = document.querySelector('[data-products]')
 let products = [
   {
       id: 1,
@@ -57,7 +58,9 @@ let products = [
   }
 ]
 localStorage.setItem(('products'),JSON.stringify(products))
-let productContainer = document.querySelector('[data-products]')
+let cart = JSON.parse(localStorage.getItem('checkout')) || []
+
+
 function displayProducts(){
     productContainer.innerHTML = ''
     if (products){
@@ -68,12 +71,11 @@ function displayProducts(){
                  <div class="card-body">
                   <h5 class="card-title">${product.name}</h5>
                   <h6 class="fw-bold">R${product.price}</h6>
-                  <a href="#" class="btn btn-dark ">Add to cart</a>
+                  <a href="#" class="btn btn-dark " data-add-to-cart onclick='addToCart(${JSON.stringify(product)})'>Add to cart</a>
                 </div>
               </div>
                 
             `
-           localStorage.setItem('products', JSON.stringify(product))
             
         });
     }
@@ -96,7 +98,7 @@ searchInput.addEventListener('keyup',()=>{
              <div class="card-body">
               <h5 class="card-title">${item.name}</h5>
               <h6 class="fw-bold">R${item.price}</h6>
-              <a href="#" class="btn btn-dark" data-add-to-cart>Add to cart</a>
+              <a href="#" class="btn btn-dark" data-add-to-cart onclick='addToCart(${JSON.stringify(item)})'>Add to cart</a>
             </div>
           </div>
             
@@ -123,7 +125,7 @@ function sorting(){
      <div class="card-body">
        <h5 class="card-title">${sortedProduct.name}</h5>
        <h6 class="fw-bold">${sortedProduct.price}</h6>
-       <a href="#" class="btn btn-dark">Add to cart</a>
+       <a href="#" class="btn btn-dark" data-add-to-cart onclick='addToCart(${JSON.stringify(sortedProduct)})'>Add to cart</a>
      </div>
    </div>
      
@@ -137,5 +139,11 @@ function sorting(){
 btnSort.addEventListener('click', sorting )
 
 
+function addToCart(item){
+  if(item)
+    cart.push(item)
+  localStorage.setItem('checkout', JSON.stringify(cart))
+     
+}
 
 

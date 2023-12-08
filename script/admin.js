@@ -19,7 +19,7 @@ function displayAdmin() {
                     <td>${prod.name}</td>
                     <td><img src="${prod.image}" alt="${prod.name
                     }" class="img-fluid" style="width:15rem;"></td>
-                    <td>${prod.price}0</td>
+                    <td>${prod.price}</td>
                     <td>
                     <!-- Button trigger modal -->
                     <button type="button"  class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#editProduct${

@@ -21,7 +21,7 @@ function showCart(){
                    ${data[item].length} 
                  </td>
                  <td>
-                   ${data[item][0].price}0
+                   ${data[item][0].price}
                  </td>
                  <td data-amount>
                     R ${Math.round(eval(`${data[item][0].price} * ${data[item].length}`))}

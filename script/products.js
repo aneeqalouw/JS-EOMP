@@ -4,7 +4,7 @@ document.querySelector('#currYear').textContent = new Date().getUTCFullYear()
 let productContainer = document.querySelector('[data-products]')
 let products = JSON.parse(localStorage.getItem('products'))
 let cart = JSON.parse(localStorage.getItem('checkout')) || []
-
+let loaderDiv = document.getElementById('spinner')
 
 function displayProducts(){
     productContainer.innerHTML = ''
@@ -23,6 +23,15 @@ function displayProducts(){
             `
             
         });
+    }else {
+      loaderDiv.innerHTML = `
+      <div class="spinner-border text-danger" role="status">
+      <span class="visually-hidden">Loading...</span>
+      </div>
+      <p class="text-secondary">Oops! We couldn't find any data :( Try reloading the home page</p>
+      
+      `
+
     }
     
 }

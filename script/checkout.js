@@ -1,7 +1,6 @@
 //getting the current year and displaying it in the span next to the copyright
 document.querySelector('#currYear').textContent = new Date().getUTCFullYear()
 
-
 let cartTbl = document.querySelector('[data-cart-table]');
 let totalContainer = document.querySelector('[data-total-amount]');
 let cart = JSON.parse(localStorage.getItem('checkout'));
@@ -22,7 +21,7 @@ function showCart(){
                    ${data[item].length} 
                  </td>
                  <td>
-                   ${data[item][0].price}
+                   ${data[item][0].price}0
                  </td>
                  <td data-amount>
                     R ${Math.round(eval(`${data[item][0].price} * ${data[item].length}`))}
@@ -38,7 +37,7 @@ function showCart(){
             totalContainer.innerHTML = `R ${Intl.NumberFormat().format(totalPrice)}`
         }
     }catch(e) {
-     console.log('Uh oh! Something went wrong. We are sorry about that!:(') 
+     alert('Uh oh! Something went wrong. We are sorry about that!:(') 
     }
 }
 showCart()

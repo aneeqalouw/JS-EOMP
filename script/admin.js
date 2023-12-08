@@ -11,6 +11,7 @@ let adminTable = document.querySelector("[data-admin-table]");
 function displayAdmin() {
   adminTable.innerHTML = "";
   try {
+
     if(products){
       products.forEach((prod, index) => {
         adminTable.innerHTML += `
@@ -20,7 +21,7 @@ function displayAdmin() {
                     <td><img src="${prod.image}" alt="${
           prod.name
         }" class="img-fluid" style="width:15rem;"></td>
-                    <td>${prod.price}</td>
+                    <td>${prod.price}0</td>
                     <td>
                     <!-- Button trigger modal -->
                     <button type="button"  class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#editProduct${

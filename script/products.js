@@ -28,7 +28,7 @@ function displayProducts(){
       <div class="spinner-border text-danger" role="status">
       <span class="visually-hidden">Loading...</span>
       </div>
-      <p class="text-secondary">Oops! We couldn't find any data :( Try reloading the home page</p>
+      <p class="text-secondary">Oops! We couldn't find any data 😑 Try reloading the home page</p>
       
       `
 

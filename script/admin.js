@@ -110,7 +110,7 @@ adminTable.addEventListener("click", () => {
     deleteProduct(event.target.value);
   }
 });
-//here
+
 let btnAddProduct = document.querySelector("[data-btnAdd-product]");
 function addNewProduct() {
   let id = +document.getElementById("newId").value;

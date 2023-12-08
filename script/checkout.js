@@ -37,7 +37,7 @@ function showCart(){
             totalContainer.innerHTML = `R ${Intl.NumberFormat().format(totalPrice)}`
         }
     }catch(e) {
-     alert('Uh oh! Something went wrong. We are sorry about that!:(') 
+     
     }
 }
 showCart()

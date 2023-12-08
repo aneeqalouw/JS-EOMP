@@ -18,9 +18,8 @@ function displayAdmin() {
                   <tr>
                     <td>${index + 1}</td>
                     <td>${prod.name}</td>
-                    <td><img src="${prod.image}" alt="${
-          prod.name
-        }" class="img-fluid" style="width:15rem;"></td>
+                    <td><img src="${prod.image}" alt="${prod.name
+                    }" class="img-fluid" style="width:15rem;"></td>
                     <td>${prod.price}0</td>
                     <td>
                     <!-- Button trigger modal -->

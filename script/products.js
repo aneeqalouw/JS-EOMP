@@ -15,7 +15,7 @@ function displayProducts(){
                  <img src="${product.image}" class="card-img-top" alt="${product.name}">
                  <div class="card-body">
                   <h5 class="card-title">${product.name}</h5>
-                  <h6 class="fw-bold">R${product.price}0</h6>
+                  <h6 class="fw-bold">R${product.price}</h6>
                   <a href="#" class="btn btn-dark " data-add-to-cart onclick='addToCart(${JSON.stringify(product)})'>Add to cart</a>
                 </div>
               </div>
@@ -51,7 +51,7 @@ searchInput.addEventListener('keyup',()=>{
              <img src="${item.image}" class="card-img-top" alt="${item.name}">
              <div class="card-body">
               <h5 class="card-title">${item.name}</h5>
-              <h6 class="fw-bold">R${item.price}0</h6>
+              <h6 class="fw-bold">R${item.price}</h6>
               <a href="#" class="btn btn-dark" data-add-to-cart onclick='addToCart(${JSON.stringify(item)})'>Add to cart</a>
             </div>
           </div>
@@ -78,7 +78,7 @@ function sorting(){
      <img src="${sortedProduct.image}" class="card-img-top" alt="...">
      <div class="card-body">
        <h5 class="card-title">${sortedProduct.name}</h5>
-       <h6 class="fw-bold">${sortedProduct.price}0</h6>
+       <h6 class="fw-bold">${sortedProduct.price}</h6>
        <a href="#" class="btn btn-dark" data-add-to-cart onclick='addToCart(${JSON.stringify(sortedProduct)})'>Add to cart</a>
      </div>
    </div>
@@ -97,7 +97,6 @@ function addToCart(item){
   if(item)
     cart.push(item)
   localStorage.setItem('checkout', JSON.stringify(cart))
-  alert('Item added to cart')
      
 }
 

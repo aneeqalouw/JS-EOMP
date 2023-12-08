@@ -2,7 +2,6 @@
 document.querySelector("#currYear").textContent = new Date().getUTCFullYear();
 
 let loaderDiv = document.getElementById('spinner')
-let errorMsg = document.getElementById('errorHandler')
 
 let products = JSON.parse(localStorage.getItem("products"));
 let adminTable = document.querySelector("[data-admin-table]");

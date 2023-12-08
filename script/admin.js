@@ -92,7 +92,7 @@ function displayAdmin() {
       `
     }
   } catch (e) {
-    alert('No data found')
+     
     
   }
 }

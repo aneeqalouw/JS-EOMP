@@ -3,57 +3,57 @@ let products = [
     {
         id: 1,
         name: 'clear lip gloss',
-        image: 'https://i.postimg.cc/MG4nPyxK/clear.webp',
+        image: '../images/clear.webp',
         price: 109.90
     },
     {
         id: 2,
-        image: 'https://i.postimg.cc/zfDwZw9C/nude.webp',
+        image: '../images/nude.webp',
         name: 'nude lip gloss',
         price: 109.90
     },
     {
         id: 3,
-        image: 'https://i.postimg.cc/jjvWzG3N/red.webp',
+        image: '../images/red.webp',
         name: 'red lip gloss',
         price: 109.90
     },
     {
         id: 4,
-        image: 'https://i.postimg.cc/qv0W9YQz/pink.webp',
+        image: '../images/pink.webp',
         name: 'pink lip gloss',
         price: 109.90
   
     },
     {
         id: 5,
-        image: 'https://i.postimg.cc/sfLTYLbt/orange.webp',
+        image: '../images/orange.webp',
         name: 'peach lip gloss',
         price: 109.90
     },
     {
         id: 6,
-        image:'https://i.postimg.cc/d3Dvzf9b/pink-Lipoil.webp',
+        image:'../images/pinkLipoil.webp',
         name: 'pink lip oil',
         price: 89.90
     },
     {
         id: 7,
-        image: 'https://i.postimg.cc/htCFqsXg/red-Lipoil.webp',
+        image: '../images/redLipoil.webp',
         name: 'red lip oil',
         price: 89.90
     },
     {
         id: 8,
-        image: 'https://i.postimg.cc/nzJGSbnL/plum-Lip-Oil.png',
+        image: '../images/plumLipOil.png',
         name: 'plum lip oil',
         price: 89.90
     },
     {
         id: 9,
-        image: 'https://i.postimg.cc/bv3wW1h2/nude-Lipoil.webp',
+        image: '../images/nudeLipoil.webp',
         name: 'burgundy lip oil',
         price: 89.90
     }
   ]
-  localStorage.setItem(('products'),JSON.stringify(products))
+//   localStorage.setItem(('products'),JSON.stringify(products))

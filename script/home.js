@@ -56,4 +56,4 @@ let products = [
         price: 89.90
     }
   ]
-//   localStorage.setItem(('products'),JSON.stringify(products))
+  localStorage.setItem(('products'),JSON.stringify(products))

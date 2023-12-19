@@ -61,6 +61,7 @@ function purchased(){
 
   }else{
     alert('Your cart is empty!')
+    
   }
   
 }
